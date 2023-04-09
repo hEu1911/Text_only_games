@@ -8,7 +8,7 @@ using namespace std;
 string get_random_word(vector<string> &words);
 void play();
 
-vector<string> words = {"programming", "hangman", "games", "ship", "dodge", "die", "new vegas", "fallout"};
+vector<string> words = {"programming", "hangman", "games", "ship", "dodge", "die", "new vegas", "fallout", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", };
 
 string hangman_art[7] = {
 	" +---+\n"
