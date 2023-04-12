@@ -69,8 +69,9 @@ int main()
 
 	return 0;
 }
-
-string secret_word = get_random_word(words);
+void play()
+{	
+	string secret_word = get_random_word(words);
 	string guess_word = secret_word;
 	for (int i = 0; i < secret_word.length(); ++i)
 	{
