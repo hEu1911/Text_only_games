@@ -70,9 +70,7 @@ int main()
 	return 0;
 }
 
-void play()
-{
-	string secret_word = get_random_word(words);
+string secret_word = get_random_word(words);
 	string guess_word = secret_word;
 	for (int i = 0; i < secret_word.length(); ++i)
 	{
@@ -83,9 +81,13 @@ void play()
 
 	while (true)
 	{
-		cout << hangman_art[try_no] << "\n";
-		cout << guess_word << "\n";
-		cout << "Enter your guess:\n";
+		cout << hangman_art[try_no] << endl;
+		cout << guess_word << endl
+			 << endl;
+        //tips:
+		cout << "Hint: The word has " << secret_word.length() << " letters!" << endl;
+		//-------
+		cout << "Enter your guess:" << endl;
 		cin >> guess;
 
 		if (secret_word.find(guess) != string::npos)
@@ -99,9 +101,9 @@ void play()
 			}
 			if (secret_word == guess_word)
 			{
-				cout << hangman_art[try_no] << "\n";
-				cout << guess_word << "\n";
-				cout << "You win! The word was " << secret_word << "\n";
+				cout << hangman_art[try_no] << endl;
+				cout << guess_word << endl;
+				cout << "You win! The word was " << secret_word << endl;
 				break;
 			}
 		}
@@ -111,9 +113,9 @@ void play()
 		}
 		if (try_no >= 6)
 		{
-			cout << hangman_art[try_no] << "\n";
-			cout << guess_word << "\n";
-			cout << "You lost! The word was " << secret_word << "\n";
+			cout << hangman_art[try_no] << endl;
+			cout << guess_word << endl;
+			cout << "You lost! The word was: " << secret_word << endl;
 			break;
 		}
 	}
