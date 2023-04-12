@@ -8,58 +8,58 @@ using namespace std;
 string get_random_word(vector<string> &words);
 void play();
 
-vector<string> words = {"programming", "hangman", "games", "ship", "dodge", "die", "new vegas", "fallout", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", };
+vector<string> words = {"programming", "hangman", "games", "ship", "dodge", "die", "new vegas", "gender", "war", "never", "changes", "fallout", "brotherhood", "steel", "railroad", "fighter", "destruction", "hallow", "aileron", "book" };
 
 string hangman_art[7] = {
-	" +---+\n"
-	" |   |\n"
-	"     |\n"
-	"     |\n"
-	"     |\n"
-	"     |\n"
-	"==========",
-	" +---+\n"
-	" |   |\n"
-	" O   |\n"
-	"     |\n"
-	"     |\n"
-	"     |\n"
-	"==========",
-	" +---+\n"
-	" |   |\n"
-	" O   |\n"
-	" |   |\n"
-	"     |\n"
-	"     |\n"
-	"==========",
-	" +---+\n"
-	" |   |\n"
-	" O   |\n"
-	"/|   |\n"
-	"     |\n"
-	"     |\n"
-	"==========",
-	" +---+\n"
-	" |   |\n"
-	" O   |\n"
-	"/|\\  |\n"
-	"     |\n"
-	"     |\n"
-	"==========",
-	" +---+\n"
-	" |   |\n"
-	" O   |\n"
-	"/|\\  |\n"
-	"/    |\n"
-	"     |\n"
-	"==========",
-	" +---+\n"
-	" |   |\n"
-	" O   |\n"
-	"/|\\  |\n"
-	"/ \\  |\n"
-	"     |\n"
-	"=========="};
+				" +---+\n"
+				" |   |\n"
+				"     |\n"
+				"     |\n"
+				"     |\n"
+				"     |\n"
+				"==========",
+				" +---+\n"
+				" |   |\n"
+				" O   |\n"
+				"     |\n"
+				"     |\n"
+				"     |\n"
+				"==========",
+				" +---+\n"
+				" |   |\n"
+				" O   |\n"
+				" |   |\n"
+				"     |\n"
+				"     |\n"
+				"==========",
+				" +---+\n"
+				" |   |\n"
+				" O   |\n"
+				"/|   |\n"
+				"     |\n"
+				"     |\n"
+				"==========",
+				" +---+\n"
+				" |   |\n"
+				" O   |\n"
+				"/|\\  |\n"
+				"     |\n"
+				"     |\n"
+				"==========",
+				" +---+\n"
+				" |   |\n"
+				" O   |\n"
+				"/|\\  |\n"
+				"/    |\n"
+				"     |\n"
+				"==========",
+				" +---+\n"
+				" |   |\n"
+				" O   |\n"
+				"/|\\  |\n"
+				"/ \\  |\n"
+				"     |\n"
+				"=========="};
 
 int main()
 {
@@ -84,7 +84,7 @@ string secret_word = get_random_word(words);
 		cout << hangman_art[try_no] << endl;
 		cout << guess_word << endl
 			 << endl;
-        //tips:
+        //added tips line:
 		cout << "Hint: The word has " << secret_word.length() << " letters!" << endl;
 		//-------
 		cout << "Enter your guess:" << endl;
